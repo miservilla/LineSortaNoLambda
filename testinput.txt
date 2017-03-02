@@ -1,0 +1,17 @@
+This is a test.
+Only a test.
+A test of your code.
+  Some lines have white space
+some are lowercase
+1234 some have numbers
+
+some even were blank
+
+some lines are the same length A
+some lines are the same length C
+some lines are the same length B
+
+It doesn't matter what characters are on the line or how long it is.
+I'm sure your code can sort them all.
+!@#$%^&* (even if there are special characters)
+really, don't go overthinking this one.
