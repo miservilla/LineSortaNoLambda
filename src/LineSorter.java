@@ -13,12 +13,7 @@ import java.util.Iterator;
  * @version date 2017-03-02
  */
 public class LineSorter implements Comparator<String> {
-    private int sentenceLength;
 
-    public LineSorter(String sentence) {
-//        super();
-        this.sentenceLength = sentence.length();
-    }
     @Override
     public int compare(String o1, String o2) {
         return o1.length() - o2.length();
@@ -29,7 +24,7 @@ public class LineSorter implements Comparator<String> {
         ArrayList<String> lines = new ArrayList<>();
         try (BufferedReader reader = Files.newBufferedReader(source))
         {
-            String line = null;
+            String line;
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
             }
@@ -37,7 +32,7 @@ public class LineSorter implements Comparator<String> {
             System.out.println(e.getMessage());
         }
         Collections.sort(lines);
-        Collections.sort(lines, new LineSorter(lines.get(0)));
+        Collections.sort(lines, new LineSorter());
         try (BufferedWriter writer = Files.newBufferedWriter(target))
         {
             Iterator<String> iterator = lines.iterator();
