@@ -21,9 +21,7 @@ public class LineSorter implements Comparator<String> {
     }
     @Override
     public int compare(String o1, String o2) {
-        int dist1 = (o1.length() - sentenceLength);
-        int dist2 = (o2.length() - sentenceLength);
-        return dist1 - dist2;
+        return o1.length() - o2.length();
     }
     public static void main(String[] args) throws IOException {
         Path source = Paths.get("testinput.txt"); //for source test file
